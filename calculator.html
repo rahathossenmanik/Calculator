@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+	<link rel="icon" href="calculator.png"/>
+	<head>
+		<title>JavaScript Calculator</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<style>
+			* {
+			  box-sizing: border-box;
+			}
+			article {
+			  float: left;
+			  padding: 20px;
+			  width: 100%;
+			  background-color: #f1f1f1;
+			  height: 280px;
+			}
+			footer {
+			  background-color: #777;
+			  padding: 10px;
+			  text-align: center;
+			  color: white;
+			}
+			button {
+				width: 19.72%;
+				height: 90px;
+				color: #003333;
+				background-color: #999966;
+				font-size: 48px;
+				font-weight: bold;
+			}
+		</style>
+		<script src="functions.js"></script>
+	</head>
+	<body>
+		<div style="display:inline-block;">
+			<textarea id="type" readonly="true" style="background-color:navy; color:red; text-align:right; font-size:60px;" rows="1" cols="40"></textarea>
+			<textarea id="ans" readonly="true" style="background-color:orange; color:navy; text-align:right; font-size:60px;" rows="1" cols="40"></textarea>
+		</div>
+		<section>
+		    <button onclick="document.location.reload()">⌦</button>
+		    <button onclick="seven()">7</button>
+		    <button onclick="eight()">8</button>
+		    <button onclick="nine()">9</button>
+		    <button onclick="division()">÷</button>
+		    <button onclick="negation()">+/-</button>
+		    <button onclick="four()">4</button>
+		    <button onclick="five()">5</button>
+		    <button onclick="six()">6</button>
+		    <button onclick="multiplication()">×</button>
+		    <button onclick="root()">√</button>
+		    <button onclick="one()">1</button>
+		    <button onclick="two()">2</button>
+		    <button onclick="three()">3</button>
+		    <button onclick="subtraction()">-</button>
+		    <button onclick="percent()">%</button>
+		    <button onclick="zero()">0</button>
+		    <button onclick="decimal()">.</button>
+		    <button onclick="equal()">=</button>
+		    <button onclick="addition()">+</button>
+		</section>
+	</body>
+</html>
