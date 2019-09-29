@@ -1,3 +1,7 @@
+function clearall() {
+    document.getElementById("type").innerHTML = null;
+	document.getElementById("ans").innerHTML = null;
+}
 function one() {
 	var x = document.getElementById("type").value;
     document.getElementById("type").innerHTML = x+1;
@@ -40,7 +44,11 @@ function zero() {
 }
 function decimal() {
 	var x = document.getElementById("type").value;
-    document.getElementById("type").innerHTML = x+".";
+	var count=0;
+	for(i=0; i<x.length; i++){
+		if(x[i]==".")count=1;
+	}
+    if(count==0)document.getElementById("type").innerHTML = x+".";
 }
 
 
@@ -62,6 +70,7 @@ function root() {
     document.getElementById("type").innerHTML = x;
     document.getElementById("ans").innerHTML = Math.sqrt(x);
     if(isNaN(Math.sqrt(x))){
+		document.getElementById("type").innerHTML = y;
     	document.getElementById("ans").innerHTML = Math.sqrt(y);
     }
 }
@@ -76,19 +85,19 @@ function percent() {
 }
 function addition() {
 	var x = document.getElementById("type").value;
-    document.getElementById("type").innerHTML = x+"+";
+	if(x[x.length-1]!="+")document.getElementById("type").innerHTML = x+"+";
 }
 function subtraction() {
 	var x = document.getElementById("type").value;
-    document.getElementById("type").innerHTML = x+"-";
+	if(x[x.length-1]!="-")document.getElementById("type").innerHTML = x+"-";
 }
 function multiplication() {
 	var x = document.getElementById("type").value;
-    document.getElementById("type").innerHTML = x+"×";
+    if(x[x.length-1]!="×")document.getElementById("type").innerHTML = x+"×";
 }
 function division() {
 	var x = document.getElementById("type").value;
-    document.getElementById("type").innerHTML = x+"÷";
+    if(x[x.length-1]!="÷")document.getElementById("type").innerHTML = x+"÷";
 }
 function equal() {
 	var x = document.getElementById("type").value;
